@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-static-deploy
+  namespace: example-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-static-app
+  template:
+    metadata:
+      labels:
+        app: fastapi-static-app
+    spec:
+      containers:
+      - name: fastapi-serve-static
+        image: image-registry.openshift-image-registry.svc:5000/example-project/fastapi-serve-static:1.0.0
+        ports:
+        - containerPort: 8080
