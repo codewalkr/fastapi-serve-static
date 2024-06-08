@@ -1,4 +1,4 @@
-# Simple FastAPI application for service static web pages.
+# Simple FastAPI application to serve static web pages.
 
 ## Clone
 
@@ -15,7 +15,7 @@ cd fastapi-serve-static/
 
 ## Develop
 
-Create Python 3 virtual environemnt:
+Create Python 3 virtual environment:
 
 ```
 python -m venv venv
